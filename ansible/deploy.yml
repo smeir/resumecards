@@ -1,0 +1,7 @@
+---
+- hosts: all
+  remote_user: root
+
+  tasks:
+    - name: copy generated static files to destination
+      copy: src="../_site/" dest="/var/www/tapnic.com" owner="www-data" group="www-data"
